@@ -22,6 +22,24 @@ class Product
     end
   end
 
+  def self.in_stock
+    in_stock = Array.new
+    @@products.each do |product|
+      unless product.stock <= 0
+        in_stock << product
+      end
+    end
+  return in_stock
+  end
+
+  def in_stock?
+    if @stock.to_i > 0
+      return true
+    else
+      return false
+    end
+  end
+
 
   private
 
