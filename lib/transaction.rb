@@ -10,6 +10,7 @@ class Transaction
     @customer = customer
     @product = product
     product.reduce_stock(1)
+    @@transactions << self
   end
 
   def self.all
@@ -19,6 +20,10 @@ class Transaction
   def customer_id
     @id = @@id
     @@id += 1
+  end
+
+  def self.find(transaction_number)
+    @@transactions.fetch(transaction_number - 1)
   end
 
 end

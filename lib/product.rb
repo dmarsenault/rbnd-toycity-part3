@@ -41,7 +41,11 @@ class Product
   end
 
   def reduce_stock(amount)
-    @stock -= amount
+    unless @stock == 0
+      @stock -= amount
+    else
+      raise OutOfStockError
+    end
   end
 
 
