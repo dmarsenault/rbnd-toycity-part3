@@ -40,6 +40,10 @@ class Product
     end
   end
 
+  def reduce_stock(amount)
+    @stock -= amount
+  end
+
 
   private
 
