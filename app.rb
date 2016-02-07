@@ -5,9 +5,9 @@ require_relative "lib/transaction"
 
 # PRODUCTS
 
-Product.new(title: "LEGO Iron Man vs. Ultron", price: 22.99, stock: 55)
-Product.new(title: "Nano Block Empire State Building", price: 49.99, stock: 12)
-Product.new(title: "LEGO Firehouse Headquarter", price: 199.99, stock: 0)
+Product.new(title: "LEGO Iron Man vs. Ultron", price: 22.99, stock: 55, discount: "25%")
+Product.new(title: "Nano Block Empire State Building", price: 49.99, stock: 12, discount: "50%", location: "In Transit")
+Product.new(title: "LEGO Firehouse Headquarter", price: 199.99, stock: 0, discount: "10%")
 
 puts Product.all.count # Should return 3
 # LEAVE COMMENTED: Product.new(title: "LEGO Iron Man vs. Ultron", price: 22.99, stock: 55)
@@ -29,8 +29,8 @@ puts products_in_stock.include?(firehouse) # Should return false
 
 # CUSTOMERS
 
-Customer.new(name: "Walter Latimer")
-Customer.new(name: "Julia Van Cleve")
+Customer.new(name: "Walter Latimer", state: "California")
+Customer.new(name: "Julia Van Cleve", state: "California")
 
 puts Customer.all.count # Should return 2
 
@@ -63,3 +63,8 @@ puts transaction2.product == nanoblock # Should return true
 
 # LEAVE COMMENTED walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+puts Product.discount(nanoblock) # Added feature...showing product discount
+
+# LEAVE COMMENTED david = Customer.find_by_name("David Arsenault")
+# LEAVE COMMENTED puts david.name

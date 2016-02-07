@@ -1,0 +1,12 @@
+1) How long did you spend working on this project?
+This project took me about 5 hours to complete.  The most difficult part for me was formulating two extra features...making them make sense in my head and then trying to translate them so the computer would understand.
+
+2) What was the most rewarding challenge you conquered?
+I think this entire project was rewarding for me because it was the first time where I felt like I had a clear direction and a fairly certain understanding of what needed to be done.  I am starting to see far less errors, or at least know how to fix them when I see them.  My understanding is definitely growing.
+
+3) What two additional features did you build? Why?
+The first feature I built is a discount feature for the products.  I thought it would be helpful for a business to know how much a product is currently discounted.  Therefore, they can run the discount on the product title and get the percentage.
+The second feature I added was an error for a customer not being in the database.  I also put in the DuplicateNameError even though I did not see it call for it.  I felt like if we were pulling from the product tab and we had a DuplicateProductError, the DuplicateNameError would be helpful as well.  Now an error will throw if we have a duplicate name and if a name does not exist when we try ands search by it.
+
+4) Where do you still have room to grow?
+The code doesn't just flow off my fingers.  I have to think A LOT about it and how it is doing what it is doing.  Google is still my best friend.

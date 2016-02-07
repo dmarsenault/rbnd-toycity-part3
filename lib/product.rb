@@ -1,5 +1,5 @@
 class Product
-  attr_reader :title, :price, :stock
+  attr_reader :title, :price, :stock, :discount
 
   @@products = []
 
@@ -8,6 +8,7 @@ class Product
     add_to_products
     @price = options[:price]
     @stock = options[:stock]
+    @discount = options[:discount]
   end
 
   def self.all
@@ -48,6 +49,11 @@ class Product
     end
   end
 
+  def self.discount(amount)
+    @@products.each do |discounts|
+      return discounts.discount
+    end
+  end
 
   private
 

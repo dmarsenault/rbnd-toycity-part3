@@ -3,7 +3,7 @@ class Transaction
 
   @@transactions = Array.new
 
-  @@id = 1
+  @@id = 0
 
   def initialize(customer, product)
     @id = customer_id

@@ -3,6 +3,7 @@ class Customer
 
   @@customers = Array.new
 
+
   def initialize(options={})
     @name = options[:name]
     add_to_customers
@@ -16,6 +17,8 @@ class Customer
     @@customers.each do |customer|
       if customer.name == customer_name
         return customer
+      else
+        raise NoSuchCustomer "#{self.name} is not in our database."
       end
     end
   end
